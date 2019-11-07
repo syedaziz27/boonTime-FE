@@ -1,0 +1,6 @@
+.container-channels {
+    max-height: 50vh;
+    overflow: scroll;
+    /* border: 1px solid black; */
+    width: 25%;
+}

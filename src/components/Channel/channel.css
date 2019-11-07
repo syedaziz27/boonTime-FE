@@ -1,0 +1,24 @@
+.container-channel {
+    display: flex;
+    height: 57px;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.container-channel_img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.container-channel-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.container-channel-info_name {
+    position: absolute;
+    top: -10px;
+}

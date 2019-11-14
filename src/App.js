@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import themeFile from "./utils/theme";
 import Navbar from "./components/Navbar";
 import TrendingChannels from "./components/trendingChannels/trendingChannels";
-
+import VideoCard from "./components/VideoCard";
 //MUI stuff
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core";
 

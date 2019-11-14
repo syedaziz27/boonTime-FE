@@ -1,7 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Button } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
-import { maxWidth } from "@material-ui/system";
 
 const styles = {
   idk: {

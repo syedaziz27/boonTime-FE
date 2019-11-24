@@ -5,7 +5,7 @@ const channel = ({ user }) => {
   if (!user) {
     return null;
   }
-  console.log(user);
+
   return (
     <>
       <div className="container-channel">
@@ -14,13 +14,11 @@ const channel = ({ user }) => {
           alt="user"
           className="container-channel_img"
         />
-        <div className="container-channel-info">
-          <p className="container-channel-info_name">
-            {user.name.first} {user.name.last}
-            <br />
-            {user.email}
-          </p>
-        </div>
+        <p className="container-channel-user_name">
+          {user.name.first} {user.name.last}
+        </p>
+        <br />
+        <p className="container-channel-user_product">{user.email}</p>
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Channel from "../Channel/channel";
+import Channel from "./Channel/channel";
 import axios from "axios";
 import "./trendingChannels.css";
 
@@ -18,6 +18,7 @@ const TrendingChannels = () => {
 
   return (
     <div className="container-channels">
+      <p className="container-channels-trending">Trending Channels</p>
       {userList.map(user => {
         return <Channel user={user} />;
       })}

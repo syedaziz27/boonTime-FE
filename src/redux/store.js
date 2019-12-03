@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger'; // catches errors in redux
 import rootReducer from './root-reducer';
 

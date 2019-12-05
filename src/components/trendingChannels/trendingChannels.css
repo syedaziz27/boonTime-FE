@@ -1,6 +1,19 @@
 .container-channels {
-    max-height: 50vh;
+    position: absolute;
+    width: 379px;
+    height: 408px;
+    left: 0px;
+    top: 87px;
+    background: #FFFFFF;
+    box-sizing: border-box;
     overflow: scroll;
-    /* border: 1px solid black; */
-    width: 25%;
+}
+
+.container-channels-trending {
+    margin-left: 29px;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 0;
 }

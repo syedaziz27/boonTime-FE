@@ -1,6 +1,6 @@
 import React from "react";
 import "./UserProfile.css";
-import Products from "../Product-recommendations/products";
+
 const UserProfile = () => {
   return (
     <>
@@ -43,7 +43,6 @@ const UserProfile = () => {
           <p className="inquiries_location"> Location: United States</p>
         </div>
       </div>
-      <Products />
     </>
   );
 };

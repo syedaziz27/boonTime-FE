@@ -8,7 +8,6 @@ const products = () => {
       <br />
       <hr className="products-start-line" />
       <br />
-
       <Product />
     </div>
   );

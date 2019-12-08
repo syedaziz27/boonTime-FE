@@ -8,16 +8,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 
 
-
-
-
-
-
 function App() {
   return (
     <BrowserRouter>
       <Route path="/" component={Navbar} />
-      <div className="container">
+      <div className="">
         {/* <TrendingChannels /> */}
         <UserProfile />
       </div>

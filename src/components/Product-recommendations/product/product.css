@@ -1,9 +1,9 @@
 .product-container {
     display: flex;
-    /* border: 1px solid black; */
-    margin: 0% 20% 0% 12%;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
+    margin: 0% 20% 0% 10%;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #888686;
+
 }
 
 .product-container-img-btn {
@@ -14,20 +14,52 @@
     padding-right: 10px;
 }
 
+.product-container-img-btn {
+    margin-right: 25px;
+}
+
 .product-container-btn {
     background-color: #000000;
     width: 70%;
-    font-family: Roboto;
+    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: normal;
     font-size: 13px;
     color: #FFFFFF;
+    padding-top: 3px;
+    margin-top: 10px;
 }
 
 .product-container-review-productInfo {
     display: flex;
     flex-direction: column;
+    font-size: 14px;
+    line-height: 16px;
+}
 
+.product-container-name {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.product-date {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+
+.product-container-name-info {
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .product-container-title {
@@ -45,7 +77,7 @@
     margin-bottom: 0px;
     display: flex;
     justify-content: space-between;
-    bottom: 0;
+
 }
 
 
@@ -67,16 +99,16 @@
 
 .product-container-review {
     margin-bottom: 0px;
-    font-family: Roboto;
+    font-family: Helvetica Neue;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 14px;
+    line-height: 16px;
     color: #888686;
 }
 
 .product-container-review-info {
-    font-family: Roboto;
+    font-family: Helvetica Neue;
     margin-top: 0px;
     font-style: normal;
     font-weight: normal;

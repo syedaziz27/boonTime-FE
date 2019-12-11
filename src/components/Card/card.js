@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import cream from "../../images/cream.jpeg";
 import user from "../../images/person.png";
 import "./card.css";
+import UserProfile from '../UserProfile/UserProfile';
 
 export default class Card extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ export default class Card extends Component {
   }
 
   render() {
-    return (
+    return (<>
       <div className="card_container container">
         <img className="thumbnail" src={cream} />
         <div className="video_title">Video Title Goes Here</div>
@@ -26,6 +27,8 @@ export default class Card extends Component {
           </div>
         </div>
       </div>
+      <UserProfile />
+    </>
     );
   }
 }

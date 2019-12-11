@@ -1,6 +1,5 @@
 .products-container {
     overflow: scroll;
-    /* border: 1px solid black; */
     position: relative;
     width: 1124px;
     height: 860px;
@@ -9,15 +8,9 @@
 }
 
 .products-start-line {
-
-    /* width: 1019px;
-    height: 0px;
-    left: 50px;
-    top: 36px; */
-    border: 1px solid #888686;
+    /* border: 1px solid #888686; */
     position: absolute;
     width: 1039px;
     height: 0px;
     left: 33px;
-
 }

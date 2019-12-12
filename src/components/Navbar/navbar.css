@@ -1,0 +1,58 @@
+.navbar-container {
+    display: flex;
+}
+
+.search-top-row {
+    display: grid;
+    grid-template-columns: 8fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 65%;
+    background-color: #CDC8CE;
+}
+
+.search-container {
+    width: 100%;
+}
+
+.search-bottom-row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    justify-items: center;
+    height: 35%;
+    background-color: #DFDFDF;
+}
+
+.sign-up {
+    color: white;
+}
+
+.login {
+    color: white
+}
+
+.searchbar {
+    display: grid;
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 8fr;
+    cursor: pointer;
+}
+
+.search-input {
+    width: 440px;
+    font-size: 16px;
+    outline: none;
+    border-color: white;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+}

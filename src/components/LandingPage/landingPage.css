@@ -3,4 +3,10 @@
     grid-template-columns: .2fr 3fr .3fr 10fr .2fr;
     box-sizing: border-box;
     padding-top: 10px;
+    text-align: center;
+}
+
+.trending-container {
+    display: grid;
+
 }

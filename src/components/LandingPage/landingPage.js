@@ -1,21 +1,27 @@
 import React from "react";
 import TrendingChannels from "../trendingChannels/trendingChannels";
 import "./landingPage.css";
+import WelcomeVideos from "../WelcomeVideos/welcomeVideos";
+import VideoCard from "../videoCard/videoCard";
 
 export default class LandingPage extends React.Component {
   render() {
     return (
-      <div className="landing-container">
-        <div></div>
-        <TrendingChannels />
-        <div></div>
-        <video width="100%" height="100%" controls>
-          <source
-            src="https://www.youtube.com/watch?v=t5uVXqNLMDc"
-            type="video/mp4"
-          />
-        </video>
-        <div></div>
+      <div>
+        <div className="landing-container">
+          <div></div>
+          <TrendingChannels />
+          <div></div>
+          <WelcomeVideos />
+          <div></div>
+        </div>
+
+        <div className="trending-containers">
+          <h3>Trending Videos</h3>
+          <div className="thumbnail-container-trending">
+            <VideoCard />
+          </div>
+        </div>
       </div>
     );
   }

@@ -19,7 +19,15 @@ export default class LandingPage extends React.Component {
         <div className="trending-containers">
           <h3>Trending Videos</h3>
           <div className="thumbnail-container-trending">
+            <div></div>
             <VideoCard />
+            <div></div>
+            <VideoCard />
+            <div></div>
+            <VideoCard />
+            <div></div>
+            <VideoCard />
+            <div></div>
           </div>
         </div>
       </div>

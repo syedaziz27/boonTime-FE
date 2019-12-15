@@ -11,27 +11,20 @@ export default class VideoCard extends Component {
   render() {
     return (
       <>
-        <div className="card_container container">
-          <img className="thumbnail" src={cream} />{" "}
-          <div className="video_title"> Video Title Goes Here </div>{" "}
-          <div className="row">
-            <div className="col-3">
-              <img className="user_thumbnail" src={user} />{" "}
-            </div>{" "}
-            <div className="col">
-              <div className="username"> username </div>{" "}
-              <span
-                className="views"
-                style={{
-                  paddingRight: "30px"
-                }}
-              >
-                views{" "}
-              </span>{" "}
-              <span className="date_posted"> date posted </span>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
+        <div className="card-container">
+          <div className="vid-thumbnail-container">
+            <img className="thumbnail" src={cream} />
+          </div>
+          <div>Video Title Goes Here</div>
+          <div className="uploader-info">
+            <img className="user-icon" src={user}></img>
+            <div>
+              <div>Username</div>
+              <span>View Count</span>
+              <span style={{ float: "right" }}>upload date</span>
+            </div>
+          </div>
+        </div>
       </>
     );
   }

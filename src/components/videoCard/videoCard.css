@@ -1,11 +1,25 @@
-.card_container.container {
-    border: 1px solid lightgrey;
-    max-width: 300px;
-    /* max-height: 380px; */
+.vid-thumbnail-container {
+    border-bottom: 1px solid lightgrey;
 
 }
 
-.user_thumbnail {
-    height: 50px;
-    width: 50px;
+.thumbnail {
+    width: 100%;
+    max-height: 300px;
+
+}
+
+.card-container {
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+
+.uploader-info {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+}
+
+.user-icon {
+    max-width: 100%;
+    max-height: 100%;
 }

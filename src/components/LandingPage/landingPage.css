@@ -10,3 +10,8 @@
     display: grid;
 
 }
+
+.thumbnail-container-trending {
+    display: grid;
+    grid-template-columns: 0.5fr 6fr 0.5fr 6fr 0.5fr 6fr 0.5fr 6fr 0.5fr
+}

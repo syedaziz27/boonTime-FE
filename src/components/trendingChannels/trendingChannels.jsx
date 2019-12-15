@@ -17,16 +17,16 @@ const TrendingChannels = () => {
   }, []);
 
   return (
-    <>
+    <div className="trending-container">
       <div>
-        <p className="container-channels-trending">Trending Channels</p>
+        <h3>Trending Channels</h3>
       </div>
       <div className="container-channels">
         {userList.map(user => {
           return <Channel user={user} />;
         })}
       </div>
-    </>
+    </div>
   );
 };
 

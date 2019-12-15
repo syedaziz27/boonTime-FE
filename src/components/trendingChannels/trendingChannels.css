@@ -1,5 +1,4 @@
 .container-channels {
-    width: 379px;
     height: 408px;
     left: 0px;
     top: 87px;
@@ -15,4 +14,8 @@
     line-height: 21px;
     color: #000000;
     margin-bottom: 0;
+}
+
+.trending-container {
+    text-align: center;
 }

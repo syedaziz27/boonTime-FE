@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 import star from "../../images/star.png";
 import mg from "../../images/mg.png";
@@ -20,8 +21,12 @@ function Navbar() {
             <img className="dropdown-arrow" src={arrow}></img>
           </div>
 
-          <a className="sign-up">Sign Up</a>
-          <a className="login">Login</a>
+          <Link to="/signup" className="sign-up">
+            Sign Up
+          </Link>
+          <Link to="/login" className="login">
+            Login
+          </Link>
         </div>
         <div className="search-bottom-row">
           <div></div>

@@ -1,0 +1,182 @@
+.UserProfile-container {
+    position: absolute;
+    width: 313px;
+    height: 938px;
+    left: 0px;
+    top: 86px;
+    border: 1px solid black;
+    overflow: hidden;
+    background: #E5E5E5;
+}
+
+.UserProfile-container-image {
+    position: absolute;
+    width: 195px;
+    height: 201px;
+    left: 57px;
+    top: 30px;
+    background: url('https://images.unsplash.com/photo-1525801383615-8509c5921809?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80'), #DF9E9E;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.UserProfile-container-username {
+
+    position: absolute;
+    width: 205px;
+    height: 34px;
+    left: 52px;
+    top: 249px;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+.UserProfile-container-subscribers {
+    position: absolute;
+    width: 164px;
+    height: 21px;
+    left: 69px;
+    top: 286px;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+.UserProfile-container-button {
+    position: absolute;
+    width: 220px;
+    height: 40px;
+    left: 47px;
+    top: 342px;
+    color: #FFFFFF;
+    background: #5925EB;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.userButton {
+    position: absolute;
+    width: 197px;
+    height: 23px;
+    left: 57px;
+    font-family: Helvetica;
+    text-align: center;
+}
+
+.UserProfile-container-views {
+    position: absolute;
+    width: 110px;
+    height: 29px;
+    left: 96px;
+    top: 375px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.UserProfile-container-join {
+    position: absolute;
+    width: 162px;
+    height: 21px;
+    left: 77px;
+    top: 396px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+}
+
+.UserProfile-container-about {
+    position: absolute;
+    width: 278px;
+    height: 160px;
+    left: 23px;
+    top: 433px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.UserProfile-container-info {
+    position: absolute;
+    width: 278px;
+    height: 160px;
+    left: 23px;
+    top: 473px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.container-links {
+    position: relative;
+    width: 253px;
+    height: 112px;
+    left: 23px;
+    top: 570px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5925EB;
+}
+
+.links_title {
+    position: absolute;
+    width: 253px;
+    height: 112px;
+    padding-bottom: 100px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.c-links {
+    position: absolute;
+    top: 40px;
+}
+
+.links {
+    display: block;
+    text-decoration: none;
+    color: #5925EB;
+}
+
+
+.container-info {
+    position: absolute;
+    width: 313px;
+    height: 938px;
+    left: 0px;
+    top: 86px;
+}
+
+.container-inquiries {
+    position: absolute;
+    width: 290px;
+    height: 78px;
+    left: 23px;
+    top: 699px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+
+.inquiries_email {
+    text-decoration: none;
+    color: #5925EB;
+}

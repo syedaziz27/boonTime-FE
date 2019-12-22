@@ -1,0 +1,22 @@
+.container-channels {
+    height: 408px;
+    left: 0px;
+    top: 87px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    overflow: scroll;
+}
+
+.container-channels-trending {
+    margin-left: 29px;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.trending-container {
+    text-align: center;
+    height: 100%;
+}

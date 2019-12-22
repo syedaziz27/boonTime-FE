@@ -1,0 +1,29 @@
+.products-container {
+    /* overflow: scroll;
+    position: relative;
+    width: 1124px;
+    height: 860px;
+    left: 314px;
+    top: 164px; */
+    font-family: Roboto;
+}
+
+.products-start-line {
+    /* border: 1px solid #888686; */
+    /* position: absolute; */
+    width: 1039px;
+    height: 0px;
+    left: 33px;
+}
+
+.select-items {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.select_products {}
+
+.num_products {
+    color: #888686;
+}

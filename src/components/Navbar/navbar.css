@@ -42,7 +42,6 @@
     align-items: center;
     grid-template-columns: 1fr 8fr 1fr;
     border-radius: 20px;
-    ;
 }
 
 .search-input {

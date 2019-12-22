@@ -1,7 +1,6 @@
 import React from "react";
 import Product from "./product/product";
 import "./products.css";
-import Card from "../Card/card";
 import UserProfile from "../UserProfile/UserProfile";
 
 const products = () => {

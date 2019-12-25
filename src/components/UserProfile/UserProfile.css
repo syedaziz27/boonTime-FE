@@ -1,10 +1,17 @@
+.user_container {
+    grid-area: user;
+}
+
+.user {
+    position: relative;
+}
+
 .UserProfile-container {
     position: absolute;
     width: 313px;
     height: 938px;
     left: 0px;
-    top: 86px;
-    border: 1px solid black;
+    right: 0px;
     overflow: hidden;
     background: #E5E5E5;
 }
@@ -22,7 +29,6 @@
 }
 
 .UserProfile-container-username {
-
     position: absolute;
     width: 205px;
     height: 34px;

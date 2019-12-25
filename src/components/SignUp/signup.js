@@ -26,19 +26,17 @@ export default class SignUp extends React.Component {
             <div className="input-cont">
               <span className="input-desc">Password </span>
               <input placeholder="required" className="input-field"></input>
-            </div>
-            <div className="input-cont">
               <span className="input-desc">Confirm Password </span>
               <input placeholder="required" className="input-field"></input>
             </div>
+
             <div className="input-cont">
               <span className="input-desc">First Name </span>
               <input placeholder="required" className="input-field"></input>
-            </div>
-            <div className="input-cont">
               <span className="input-desc">Last Name </span>
               <input placeholder="required" className="input-field"></input>
             </div>
+
             <div className="input-cont">
               <span className="input-desc">Username </span>
               <input placeholder="required" className="input-field"></input>
@@ -76,6 +74,28 @@ export default class SignUp extends React.Component {
 
                   <div className="att-right black"></div>
                 </div>
+              </div>
+            </div>
+
+            <div className="input-cont">
+              <span className="input-desc">Select Your Skin Type</span>
+              <div className="attribute-container">
+                <div className="skin-type-cont">Oily</div>
+                <div className="skin-type-cont">Combo</div>
+                <div className="skin-type-cont">Dry</div>
+                <div className="skin-type-cont">Sensitive</div>
+                <div className="skin-type-cont">Acne Prone</div>
+              </div>
+            </div>
+
+            <div className="input-cont">
+              <span className="input-desc">Select Your Hair Type</span>
+              <div className="attribute-container">
+                <div className="skin-type-cont">Straight</div>
+                <div className="skin-type-cont">Curly</div>
+                <div className="skin-type-cont">Kinky</div>
+                <div className="skin-type-cont">Wavy</div>
+                <div className="skin-type-cont">Baldy</div>
               </div>
             </div>
 

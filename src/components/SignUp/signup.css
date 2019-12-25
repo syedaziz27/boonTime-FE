@@ -6,12 +6,12 @@
 .signup-form-container {
     display: grid;
     min-height: 1000px;
-    background-color: lightgrey;
-    grid-template-columns: 1fr 2fr;
+    background-color: #E5E5E5;
+    grid-template-columns: 1fr 4fr;
 }
 
 .upload-img-container {
-    background-color: lightpink;
+    background-color: #DFDFDF;
 }
 
 .signup-form {
@@ -20,19 +20,100 @@
 
 .input-field {
     font-size: 16px;
-    outline: none;
-    border-color: white;
     padding: 10px;
-    border: none;
+    border: 2px;
     background-image: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
     cursor: pointer;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
-.input-desc {
-    font-size: 18px;
+.input-cont {
+    padding-bottom: 10px;
+}
+
+.attribute-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+
+}
+
+.attribute {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.att-left {
+    height: 100%;
+    width: 50px;
+    border: .5px solid white;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+}
+
+.att-right {
+    height: 100%;
+    width: 50px;
+    border: .5px solid white;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.skin-type-cont {
+    height: 100px;
+    width: 100px;
+    border: .5px solid white;
+    border-radius: 100px;
+    display: grid;
+    place-items: center;
+    background-color: #FEFAEE;
+}
+
+.white {
+    background-color: #FEFAEE;
+    height: 100%;
+
+}
+
+.yellow {
+    background-color: #FFF8DE;
+}
+
+.pink {
+    background-color: #FBE3CE;
+}
+
+.purple {
+    background-color: #F4DFCC;
+}
+
+.lightbrown {
+    background-color: #D5C3B2;
+}
+
+.medbrown {
+    background-color: #CAAB91;
+}
+
+.brown {
+    background-color: #AD8663;
+}
+
+.darkbrown {
+    background-color: #916945;
+}
+
+.darkerbrown {
+    background-color: #62462C;
+}
+
+.black {
+    background-color: #301F10;
 }

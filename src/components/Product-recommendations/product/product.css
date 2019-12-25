@@ -1,5 +1,4 @@
 .product-container {
-    padding-left: 7%;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -9,8 +8,9 @@
         'product-container-img-btn . . . .'
         '. . . . .';
     font-family: Roboto;
-    /* border: 1px solid red; */
-
+    margin-left: 5%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .product-container-img-btn {

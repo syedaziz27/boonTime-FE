@@ -1,0 +1,7 @@
+.product_video_container {
+    display: grid;
+    grid-template-columns: 313px 1fr 1fr 1fr;
+    grid-template-areas:
+        "user serchBar serchBar serchBar "
+        "user users_stuff users_stuff users_stuff ";
+}

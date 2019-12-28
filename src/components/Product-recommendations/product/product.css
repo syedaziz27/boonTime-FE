@@ -1,118 +1,66 @@
 .product-container {
-    display: flex;
-    margin: 0% 20% 0% 10%;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #888686;
-
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    /* column-gap: 5px; */
+    grid-template-areas:
+        'product-container-img-btn product-container-review-productInfo product-container-review-productInfo product-container-review-productInfo product-date'
+        'product-container-img-btn . . . .'
+        '. . . . .';
+    font-family: Roboto;
+    margin-left: 5%;
+    width: 100%;
+    overflow: hidden;
 }
 
 .product-container-img-btn {
+    grid-area: product-container-img-btn;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-right: 10px;
+    padding-top: 15px;
 }
 
-.product-container-img-btn {
-    margin-right: 25px;
+.product-container-img {
+    grid-area: product-container-img;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .product-container-btn {
-    background-color: #000000;
-    width: 70%;
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    color: #FFFFFF;
-    padding-top: 3px;
-    margin-top: 10px;
-}
-
-.product-container-review-productInfo {
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.product-container-name {
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.product-date {
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-bottom: 0px;
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-
-.product-container-name-info {
-    font-family: Helvetica Neue;
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.product-container-title {
-    display: flex;
-    flex-direction: column;
-
+    padding: 5px 10px 5px 10px;
 }
 
 .dateName {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    height: 32.5px;
     color: #888686;
-    margin-bottom: 0px;
+}
+
+.product-container-review-productInfo {
+    grid-area: product-container-review-productInfo;
+}
+
+.product-container-name {
+    margin-bottom: 0;
+    bottom: 0;
+}
+
+.dateName {
     display: flex;
     justify-content: space-between;
-
 }
-
-
 
 .product-container-name-info {
-    margin-top: 0px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
-}
-
-
-.product-container-rev {
-    position: relative;
-    top: -20px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .product-container-review {
-    margin-bottom: 0px;
-    font-family: Helvetica Neue;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
     color: #888686;
 }
 
 .product-container-review-info {
-    font-family: Helvetica Neue;
-    margin-top: 0px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #000000;
+    margin-top: 0;
 }

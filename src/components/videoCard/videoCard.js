@@ -3,6 +3,7 @@ import cream from "../../images/cream.jpeg";
 import user from "../../images/person.png";
 import "./videoCard.css";
 
+
 export default class VideoCard extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +12,7 @@ export default class VideoCard extends Component {
   render() {
     return (
       <>
-        <div className="card-container">
+        <div className="card-container ">
           <div className="vid-thumbnail-container">
             <img className="thumbnail" src={cream} />
           </div>

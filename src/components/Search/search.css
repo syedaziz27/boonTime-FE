@@ -4,8 +4,12 @@
     margin-left: auto;
     margin-right: auto;
     grid-row-gap: 1rem;
+    border-bottom: 2px solid black;
+
+    
     
 }
+
 .item-1{
     grid-column: span 1;
 }

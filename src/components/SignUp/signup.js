@@ -5,9 +5,28 @@ export default class SignUp extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      email: "",
+      password: "",
+      confirmPw: "",
+      firstName: "",
+      lastName: "",
+      username: "",
+      displayName: "",
+      skinColor: "",
+      skinType: "",
+      hairType: "",
+      website: "",
+      facebook: "",
+      twitter: "",
+      instagram: ""
+    };
   }
 
+  handleChange(e) {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  }
   render() {
     return (
       <div className="signup-container">
@@ -20,30 +39,65 @@ export default class SignUp extends React.Component {
           <div className="signup-form">
             <h4>For The Best Results, Answer as Many as Possible</h4>
             <div className="input-cont">
-              <span className="input-desc">Email Address </span>
-              <input placeholder="required" className="input-field"></input>
+              <span className="input-desc">Email Address</span>
+              <input
+                name="email"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Password </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="password"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
               <span className="input-desc">Confirm Password </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="confirmPw"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">First Name </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="firstName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
               <span className="input-desc">Last Name </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="lastName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">Username </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="username"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Display Name </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="displayName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
 
             <div className="input-cont">
@@ -101,19 +155,39 @@ export default class SignUp extends React.Component {
 
             <div className="input-cont">
               <span className="input-desc">Website </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="website"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Facebook </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="facebook"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Twitter </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="twitter"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Instagram </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="instagram"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
           </div>
         </div>

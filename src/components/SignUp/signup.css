@@ -74,6 +74,15 @@
     display: grid;
     place-items: center;
     background-color: #FEFAEE;
+
+}
+
+.skin-type-cont:hover {
+    cursor: pointer;
+}
+
+.attribute:hover {
+    cursor: pointer;
 }
 
 .white {

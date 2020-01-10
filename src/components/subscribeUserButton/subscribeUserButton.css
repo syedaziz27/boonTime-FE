@@ -1,0 +1,40 @@
+.user_container_subscribe {
+    display: flex;
+    border: 1px solid black;
+    width: 475px;
+    height: 54px;
+}
+
+.profile_picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: auto;
+    background-size: cover;
+    border-radius: 50%;
+    border: 1px solid purple;
+    width: 47px;
+    height: 45px;
+}
+
+.profile_picture img {
+    width: 100%;
+}
+
+.user_name {
+    margin-top: 0px;
+}
+
+.user_subscribers {
+    margin-top: 0px;
+}
+
+.subscribe_button {
+    width: 135px;
+    height: 36px;
+    left: 1274px;
+    top: 177px;
+    background: #5925EB;
+    border-radius: 5px;
+}

@@ -5,9 +5,30 @@ export default class SignUp extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      email: "",
+      password: "",
+      confirmPw: "",
+      firstName: "",
+      lastName: "",
+      username: "",
+      displayName: "",
+      skinColor: "",
+      skinType: "",
+      hairType: "",
+      website: "",
+      facebook: "",
+      twitter: "",
+      instagram: ""
+    };
   }
 
+  handleChange(e) {
+    const { name, value } = e.target;
+    console.log(e.target);
+    console.log(name, value);
+    this.setState({ [name]: value });
+  }
   render() {
     return (
       <div className="signup-container">
@@ -20,59 +41,143 @@ export default class SignUp extends React.Component {
           <div className="signup-form">
             <h4>For The Best Results, Answer as Many as Possible</h4>
             <div className="input-cont">
-              <span className="input-desc">Email Address </span>
-              <input placeholder="required" className="input-field"></input>
+              <span className="input-desc">Email Address</span>
+              <input
+                name="email"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Password </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="password"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
               <span className="input-desc">Confirm Password </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="confirmPw"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">First Name </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="firstName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
               <span className="input-desc">Last Name </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="lastName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">Username </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="username"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Display Name </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="displayName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">Select Skin Color</span>
               <div className="attribute-container">
                 <div className="attribute">
-                  <div className="att-left white"></div>
-
-                  <div className="att-right yellow"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-left white"
+                    name="skinColor"
+                    value="1"
+                  ></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-right yellow"
+                    name="skinColor"
+                    value="2"
+                  ></div>
                 </div>
                 <div className="attribute">
-                  <div className="att-left pink"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-left pink"
+                    name="skinColor"
+                    value="3"
+                  ></div>
 
-                  <div className="att-right purple"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-right purple"
+                    name="skinColor"
+                    value="4"
+                  ></div>
                 </div>
                 <div className="attribute">
-                  <div className="att-left lightbrown"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-left lightbrown"
+                    name="skinColor"
+                    value="5"
+                  ></div>
 
-                  <div className="att-right medbrown"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-right medbrown"
+                    name="skinColor"
+                    value="6"
+                  ></div>
                 </div>
                 <div className="attribute">
-                  <div className="att-left brown"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-left brown"
+                    name="skinColor"
+                    value="7"
+                  ></div>
 
-                  <div className="att-right darkbrown"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-right darkbrown"
+                    name="skinColor"
+                    value="8"
+                  ></div>
                 </div>
                 <div className="attribute">
-                  <div className="att-left darkerbrown"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-left darkerbrown"
+                    name="skinColor"
+                    value="9"
+                  ></div>
 
-                  <div className="att-right black"></div>
+                  <div
+                    onClick={e => this.handleChange(e)}
+                    className="att-right black"
+                    name="skinColor"
+                    value="10"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -80,40 +185,105 @@ export default class SignUp extends React.Component {
             <div className="input-cont">
               <span className="input-desc">Select Your Skin Type</span>
               <div className="attribute-container">
-                <div className="skin-type-cont">Oily</div>
-                <div className="skin-type-cont">Combo</div>
-                <div className="skin-type-cont">Dry</div>
-                <div className="skin-type-cont">Sensitive</div>
-                <div className="skin-type-cont">Acne Prone</div>
+                <div className="skin-type-cont" name="skinType">
+                  Oily
+                </div>
+                <div className="skin-type-cont" name="skinType">
+                  Combo
+                </div>
+                <div className="skin-type-cont" name="skinType">
+                  Dry
+                </div>
+                <div className="skin-type-cont" name="skinType">
+                  Sensitive
+                </div>
+                <div className="skin-type-cont" name="skinType">
+                  Acne Prone
+                </div>
               </div>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">Select Your Hair Type</span>
               <div className="attribute-container">
-                <div className="skin-type-cont">Straight</div>
-                <div className="skin-type-cont">Curly</div>
-                <div className="skin-type-cont">Kinky</div>
-                <div className="skin-type-cont">Wavy</div>
-                <div className="skin-type-cont">Baldy</div>
+                <div
+                  className="skin-type-cont"
+                  name="hairType"
+                  onClick={e => this.handleChange(e)}
+                  value="Straight"
+                >
+                  Straight
+                </div>
+                <div
+                  className="skin-type-cont"
+                  name="hairType"
+                  onClick={e => this.handleChange(e)}
+                  value="Curly"
+                >
+                  Curly
+                </div>
+                <div
+                  className="skin-type-cont"
+                  name="hairType"
+                  onClick={e => this.handleChange(e)}
+                  value="Kinky"
+                >
+                  Kinky
+                </div>
+                <div
+                  className="skin-type-cont"
+                  name="hairType"
+                  onClick={e => this.handleChange(e)}
+                  val="Wavy"
+                >
+                  Wavy
+                </div>
+                <div
+                  className="skin-type-cont"
+                  name="hairType"
+                  onClick={e => this.handleChange(e)}
+                  value="Baldy"
+                >
+                  Baldy
+                </div>
               </div>
             </div>
 
             <div className="input-cont">
               <span className="input-desc">Website </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="website"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Facebook </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="facebook"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Twitter </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="twitter"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
             <div className="input-cont">
               <span className="input-desc">Instagram </span>
-              <input placeholder="required" className="input-field"></input>
+              <input
+                name="instagram"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
             </div>
           </div>
         </div>

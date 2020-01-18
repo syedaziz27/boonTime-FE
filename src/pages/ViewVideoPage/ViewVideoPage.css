@@ -1,0 +1,9 @@
+.videoViewPage_container {
+    display: grid;
+    grid-template-areas:
+        'videoTitle .'
+        'videoPlaying videoContent'
+        'videoPlaying makeupUsed'
+        'numViews makeupUsed'
+        'posts makeupUsed';
+}

@@ -1,0 +1,11 @@
+.title_ratings {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    grid-area: videoTitle;
+    border: 1px solid red;
+}
+
+.boon_video {
+    grid-area: videoPlaying;
+}

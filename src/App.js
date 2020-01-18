@@ -7,6 +7,7 @@ import VideoCard from "./components/videoCard/videoCard";
 import SignUp from "./components/SignUp/signup";
 import VloggersPage from './pages/VloggersPage/VloggersPage';
 import ViewVideoPage from './pages/ViewVideoPage/ViewVideoPage';
+import Search from "./components/Search/search";
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <Route path='/videopage' exact component={ViewVideoPage} />
       {/* NOTE: CHANGE VIDEOPAGE TO USERS NAME VIDEO */}
       <Route path="/vlogger" exact component={VideoCard} />
-      <Route path="/signup" exact component={SignUp}></Route>
+      <Route path="/signup" exact component={SignUp} />
+      <Route path="/search/:query" component={Search} />
     </BrowserRouter>
   );
 }

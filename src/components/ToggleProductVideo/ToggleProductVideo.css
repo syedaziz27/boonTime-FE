@@ -1,0 +1,83 @@
+.toggle_searchbar {
+    grid-area: searchBar;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "vidpro . . search";
+    border-bottom: .5px solid #888686;
+    width: 100%;
+    margin-top: 40px;
+}
+
+
+
+.toggleProductVideo_container {
+    position: relative;
+    bottom: -1px;
+    display: flex;
+    grid-area: vidpro;
+    border-bottom: hidden;
+}
+
+.video_container {
+    /* grid-area: vidpro; */
+    border: .5px solid #888686;
+    border-radius: 25px 25px 0px 0px;
+    width: 183.12px;
+    height: 44px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.video_btn {
+    cursor: pointer;
+}
+
+.prduct_btn {
+    cursor: pointer;
+}
+
+.product_container {
+    cursor: pointer;
+    border: .5px solid #888686;
+    border-radius: 25px 25px 0px 0px;
+    width: 183.12px;
+    height: 44px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+}
+
+.addColor {
+    background: #E079B0;
+}
+
+.product_container p {
+    margin-top: 8px;
+}
+
+.searchBar_container {
+    grid-area: search;
+    bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.productsVideos {
+    position: relative;
+    bottom: -1px;
+    border: 1px solid #C9BABA;
+    width: 229px;
+    height: 29px;
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 17px;
+    /* padding-left: 10px; */
+    color: #A89E9E;
+}

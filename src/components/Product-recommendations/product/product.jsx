@@ -10,6 +10,7 @@ const product = () => {
             src="https://www.sephora.com/productimages/sku/s2288090-main-zoom.jpg"
             style={{ width: 127 }}
             className="product-container-img"
+            alt="product"
           />
           <button className="product-container-btn">SHOP NOW</button>
         </div>

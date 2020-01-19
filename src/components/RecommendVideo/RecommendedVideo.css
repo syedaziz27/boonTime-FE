@@ -1,0 +1,33 @@
+.vids-container {
+    width: 100%;
+}
+
+.recVideo {
+    grid-area: recVideo;
+    /* border-bottom: 1px solid black; */
+}
+
+.videoRec {
+    grid-area: videoRec;
+    display: flex;
+}
+
+.vidInfo {
+    grid-area: vidInfo;
+    font-family: Helvetica Neue;
+    font-size: 18px;
+    line-height: 21px;
+    margin-left: 20px;
+
+}
+
+.hrText {
+    grid-area: hrText;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #8E8787;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}

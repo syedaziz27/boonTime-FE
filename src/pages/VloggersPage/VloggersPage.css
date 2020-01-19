@@ -1,0 +1,19 @@
+.product_video_container1 {
+    display: grid;
+    grid-template-columns: 313px 1fr 1fr 1fr;
+    grid-template-areas:
+        "user searchBar searchBar searchBar "
+        "user users_stuff users_stuff users_stuff ";
+}
+
+.product_video_container2 {
+    display: grid;
+    grid-template-columns: 313px 1fr 1fr 1fr;
+    grid-template-rows: auto auto 37px auto;
+    column-gap: 5px;
+    grid-template-areas:
+        "user searchBar searchBar searchBar"
+        "user recVideo recVideo vidInfo"
+        "user hrText hrText hrText"
+        "user videoRec videoRec videoRec";
+}

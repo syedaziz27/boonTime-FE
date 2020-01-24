@@ -6,4 +6,9 @@
         'videoPlaying makeupUsed'
         'numViews makeupUsed'
         'posts makeupUsed';
+    margin-left: 50px;
+}
+
+.videoContent {
+    grid-area: videoContent;
 }

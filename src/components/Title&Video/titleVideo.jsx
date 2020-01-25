@@ -6,7 +6,6 @@ const titleVideo = () => {
     <>
       <div className="title_ratings">
         <h2 className="video_title">SMOKEY DARE MAKEUP TUTORIAL</h2>
-        <h2 className="video_rating">Stars</h2>
       </div>
 
       <div className="boon_video">
@@ -16,6 +15,11 @@ const titleVideo = () => {
             type="video/mp4"
           />
         </video>
+        <div className="videoViews">
+          <span className="numViews">11.5k Views</span>
+
+          <span>Updated: 4 Months ago</span>
+        </div>
       </div>
     </>
   );

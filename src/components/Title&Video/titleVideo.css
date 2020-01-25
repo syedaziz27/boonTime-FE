@@ -3,9 +3,47 @@
     align-items: flex-end;
     justify-content: space-between;
     grid-area: videoTitle;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 890px;
+
 }
 
 .boon_video {
     grid-area: videoPlaying;
+    width: 890px;
+    height: 525px;
+}
+
+.category {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+
+.videoContent {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.showMore {
+    background: #C4C4C4;
+    width: 228px;
+    height: 39px;
+    margin-left: 25%;
+    margin-top: 20px;
+}
+
+.videoViews {
+    display: flex;
+    background-color: #F5F2F2;
+    justify-content: flex-end;
+    height: 64px;
+}
+
+.numViews {
+    margin-right: 40px;
 }

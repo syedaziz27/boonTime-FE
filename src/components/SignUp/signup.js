@@ -1,5 +1,6 @@
 import React from "react";
 import "./signup.css";
+import firebaseServices from "../../services/firebase";
 
 export default class SignUp extends React.Component {
   constructor(props) {
@@ -23,12 +24,23 @@ export default class SignUp extends React.Component {
     };
   }
 
-  handleChange(e) {
-    const { name, value } = e.target;
-    console.log(e.target);
-    console.log(name, value);
-    this.setState({ [name]: value });
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  submit(e) {
+    e.preventDefault();
+    const { email, password } = this.state;
+    firebaseServices
+      .signup(email, password)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
+
   render() {
     return (
       <div className="signup-container">
@@ -287,6 +299,7 @@ export default class SignUp extends React.Component {
             </div>
           </div>
         </div>
+        <button onClick={e => this.submit(e)}>submit</button>
       </div>
     );
   }

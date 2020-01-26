@@ -1,5 +1,5 @@
 import React from "react";
-import firebaseServices from "../services/firebase";
+import firebaseServices from "../firebase/firebase";
 
 export default class Login extends React.Component {
   state = { email: "", password: "" };

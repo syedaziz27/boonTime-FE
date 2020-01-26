@@ -25,6 +25,8 @@ firebaseServices.login = (email, password) => {
   return firebase.auth().signInWithEmailAndPassword(email, password);
 };
 
+export default firebaseServices;
+
 // firebaseServices.createUserProfileDocument = async (userAuth, additionalData) => {
 //     if (!userAuth) return;
 
@@ -62,5 +64,3 @@ firebaseServices.login = (email, password) => {
 //     prompt: 'select_account'
 // })
 // export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
-export default firebaseServices;

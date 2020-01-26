@@ -1,6 +1,6 @@
 import React from "react";
 import "./signup.css";
-import firebaseServices from "../../services/firebase";
+import firebaseServices from "../../firebase/firebase";
 
 export default class SignUp extends React.Component {
   constructor(props) {

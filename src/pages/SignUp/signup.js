@@ -1,6 +1,6 @@
 import React from "react";
 import "./signup.css";
-import firebaseServices from "../../firebase/firebase";
+import firebase from "firebase";
 
 export default class SignUp extends React.Component {
   constructor(props) {
@@ -50,13 +50,14 @@ export default class SignUp extends React.Component {
 
     e.preventDefault();
     const { email, password } = this.state;
-    firebaseServices
-      .signup(email, password)
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(email, password)
       .then(res => {
         console.log(res);
       })
       .catch(err => {
-        console.log(err);
+        alert(err.message);
       });
   }
 

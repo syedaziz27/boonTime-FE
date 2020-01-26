@@ -1,5 +1,5 @@
 import React from "react";
-import firebaseServices from "../firebase/firebase";
+import firebase from "firebase";
 
 export default class Login extends React.Component {
   state = { email: "", password: "" };
@@ -13,8 +13,9 @@ export default class Login extends React.Component {
     e.preventDefault();
 
     const { email, password } = this.state;
-    firebaseServices
-      .login(email, password)
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
       .then(response => {
         console.log("Returns: ", response);
       })
@@ -23,6 +24,17 @@ export default class Login extends React.Component {
         console.log(message);
         return;
       });
+
+    // firebaseServices
+    //   .login(email, password)
+    //   .then(response => {
+    //     console.log("Returns: ", response);
+    //   })
+    //   .catch(err => {
+    //     const { message } = err;
+    //     console.log(message);
+    //     return;
+    //   });
   }
 
   render() {

@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import VloggersPage from "./pages/VloggersPage/VloggersPage";
 import ViewVideoPage from "./pages/ViewVideoPage/ViewVideoPage";
 import Search from "./components/Search/search";
-import firebase from "firebase";
+import firebase from "./firebase/firebase";
 
 class App extends React.Component {
   state = { user: null };

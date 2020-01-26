@@ -1,6 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
+import app from "firebase/app";
 import "firebase/auth";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBEzNhMRnlx5apWuFkAvN1XT0ImSAHAu-M",
@@ -13,19 +13,11 @@ const firebaseConfig = {
   measurementId: "G-N90T6CBV5P"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+app.initializeApp(firebaseConfig);
 
-const firebaseServices = {};
+export default app;
 
-firebaseServices.signup = (email, password) => {
-  return firebase.auth().createUserWithEmailAndPassword(email, password);
-};
 
-firebaseServices.login = (email, password) => {
-  return firebase.auth().signInWithEmailAndPassword(email, password);
-};
-
-export default firebaseServices;
 
 // firebaseServices.createUserProfileDocument = async (userAuth, additionalData) => {
 //     if (!userAuth) return;

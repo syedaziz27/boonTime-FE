@@ -1,6 +1,8 @@
 import React from "react";
 import "./signup.css";
 import firebase from "firebase";
+import AuthContext from "../../contexts/auth";
+import { Redirect } from "react-router-dom";
 
 export default class SignUp extends React.Component {
   constructor(props) {
@@ -62,7 +64,7 @@ export default class SignUp extends React.Component {
   }
 
   render() {
-    return (
+    const displayForm = (
       <div className="signup-container">
         <div className="signup-banner">
           <h2> JOIN NOW </h2> <h3> FOR A BEAUTY EXPERIENCE TAILORED TO YOU </h3>{" "}
@@ -330,6 +332,17 @@ export default class SignUp extends React.Component {
         </div>{" "}
         <button onClick={e => this.submit(e)}> submit </button>{" "}
       </div>
+    );
+    return (
+      <AuthContext.Consumer>
+        {user => {
+          if (user) {
+            return <Redirect to="/" />;
+          } else {
+            return displayForm;
+          }
+        }}
+      </AuthContext.Consumer>
     );
   }
 }

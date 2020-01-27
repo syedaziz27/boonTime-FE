@@ -1,5 +1,7 @@
 import React from "react";
 import firebase from "firebase";
+import AuthContext from "../contexts/auth";
+import { Redirect } from "react-router-dom";
 
 export default class Login extends React.Component {
   state = { email: "", password: "" };
@@ -38,7 +40,7 @@ export default class Login extends React.Component {
   }
 
   render() {
-    return (
+    const displayForm = (
       <div className="login-contianer">
         <input
           onChange={e => this.handleChange(e)}
@@ -52,6 +54,17 @@ export default class Login extends React.Component {
         ></input>
         <button onClick={e => this.submitForm(e)}>Submit</button>
       </div>
+    );
+    return (
+      <AuthContext.Consumer>
+        {user => {
+          if (user) {
+            return <Redirect to="/" />;
+          } else {
+            return displayForm;
+          }
+        }}
+      </AuthContext.Consumer>
     );
   }
 }

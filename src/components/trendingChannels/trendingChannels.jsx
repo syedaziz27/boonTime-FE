@@ -21,8 +21,8 @@ const TrendingChannels = () => {
       <h3>Trending Channels</h3>
 
       <div className="container-channels">
-        {userList.map(user => {
-          return <Channel user={user} />;
+        {userList.map((user, i) => {
+          return <Channel user={user} key={i} />;
         })}
       </div>
     </div>

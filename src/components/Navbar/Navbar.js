@@ -4,6 +4,7 @@ import "./navbar.css";
 import star from "../../images/star.png";
 import mg from "../../images/mg.png";
 import arrow from "../../images/arrow.png";
+import AuthContext from "../../contexts/auth";
 
 function Navbar() {
   return (
@@ -21,12 +22,23 @@ function Navbar() {
             <img className="dropdown-arrow" src={arrow}></img>
           </div>
 
-          <Link to="/signup" className="sign-up">
-            Sign Up
-          </Link>
-          <Link to="/login" className="login">
-            Login
-          </Link>
+          <AuthContext.Consumer>
+            {user => {
+              if (user) return <Link to="/logout">Logout</Link>;
+              else
+                return (
+                  <>
+                    {" "}
+                    <Link to="/signup" className="sign-up">
+                      Sign Up
+                    </Link>{" "}
+                    <Link to="/login" className="login">
+                      Login
+                    </Link>
+                  </>
+                );
+            }}
+          </AuthContext.Consumer>
         </div>
         <div className="search-bottom-row">
           <div></div>

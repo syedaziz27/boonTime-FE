@@ -15,7 +15,7 @@ const VloggersPage = () => {
   useEffect(() => {
     axios
       .get(`http://localhost:3004/user/products`, {
-        data: {
+        params: {
           id: 1
         }
       })

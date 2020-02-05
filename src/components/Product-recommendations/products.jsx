@@ -4,7 +4,7 @@ import "./products.css";
 import arrow from "../../images/arrow.png";
 import ToggleProductVideo from "../ToggleProductVideo/ToggleProductVideo";
 
-const Products = () => {
+const Products = ({ products }) => {
   const [productsArr, setProductsArr] = useState([]);
 
   return (
@@ -33,6 +33,14 @@ const Products = () => {
             </>
           );
         })}
+        {/* {products.map(product => {
+          return (
+            <>
+              <Product products={product} />
+              <hr className="line_bwtn_products" />
+            </>
+          );
+        })} */}
       </div>
     </>
   );

@@ -10,21 +10,29 @@ const VloggersPage = () => {
   const [toggleVideoAndProducts, setToggleVideoAndProducts] = useState(false);
 
   // IF I have a user pass uid into products and video
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:3004/user/products`, {
-        params: {
-          id: 1
-        }
-      })
-      .then(d => {
-        console.log("datatatataat", d);
-      })
-      .catch(e => {
-        console.log(e);
-      });
+    // axios
+    //   .get(`http://localhost:3004/user/products`, {
+    //     params: {
+    //       id: 1
+    //     }
+    //   })
+    //   .then(data => {
+    //     setProducts(data.data);
+    //   })
+    //   .catch(error => {
+    //     throw new Error("No data");
+    //   });
+  }, []);
+
+  useEffect(() => {
+    if (localStorage.getItem("toggle") == "true") {
+      return setToggleVideoAndProducts(true);
+    } else if (localStorage.getItem("toggle") == "false") {
+      return setToggleVideoAndProducts(false);
+    }
   }, []);
 
   return (
@@ -39,7 +47,11 @@ const VloggersPage = () => {
         toggleVideoAndProducts={toggleVideoAndProducts}
         setToggleVideoAndProducts={setToggleVideoAndProducts}
       />
-      {toggleVideoAndProducts ? <Products /> : <RecommendedVideo />}
+      {toggleVideoAndProducts ? (
+        <Products products={products} />
+      ) : (
+        <RecommendedVideo />
+      )}
       <UserProfile />
     </div>
   );

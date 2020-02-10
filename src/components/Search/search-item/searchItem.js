@@ -5,11 +5,11 @@ export default (props) => {
     return (<>
         {props.results.map((e, i) => {
             return (<React.Fragment key={i}>
-                <div className="item-3"></div>
-                <div className="item-2">
+                {/* <div className="item-3"></div> */}
+                <div className="item-3">
                     <img src={cream} width="100%"></img>
                 </div>
-                <div className="item-4">
+                <div className="item-7 bottom_line">
                     <h1 className="item-12">{e.title}</h1>
                     <div className="row-search">
                         <span>1k Views</span> * <span>3 hours ago</span>
@@ -23,7 +23,7 @@ export default (props) => {
 
 
 
-                    <div className="row-search">
+                    <div className="row-search bottom_line">
                         <img className="item-2" src={cream} width="50%"></img>
                         <img className="item-2" src={cream} width="50%" width="50%"></img>
                         <img className="item-2" src={cream} width="50%" width="50%"></img>
@@ -34,7 +34,7 @@ export default (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="item-3"></div>
+                {/* <div className="item-3"></div> */}
             </React.Fragment>)
         })}
     </>)

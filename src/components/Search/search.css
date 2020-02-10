@@ -36,6 +36,18 @@
     grid-column: span 6;
 }
 
+.item-7 {
+    grid-column: span 7;
+}
+
+.item-8 {
+    grid-column: span 8;
+}
+
+.item-9 {
+    grid-column: span 9;
+}
+
 .item-12 {
     grid-column: span 12;
 }
@@ -55,4 +67,10 @@
 
 .sgnup_log {
     display: flex;
+}
+
+.bottom_line {
+    /* display: flex; */
+    border-bottom: 1px solid black;
+    align-content: stretch;
 }

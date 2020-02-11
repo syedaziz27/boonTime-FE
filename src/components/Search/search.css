@@ -10,6 +10,8 @@
 
 .used-products {
     margin-top: 2%;
+    display: flex;
+    flex-direction: column;
 }
 
 .item-1 {
@@ -73,4 +75,12 @@
     /* display: flex; */
     border-bottom: 1px solid black;
     align-content: stretch;
+}
+
+.border {
+    border: 1px solid orchid;
+}
+
+.pointer {
+    cursor: pointer;
 }

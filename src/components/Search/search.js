@@ -37,16 +37,18 @@ export default class Search extends React.Component {
     render() {
         return (<>
             <div className="row-search">
-                <div className='item-12 sgn_log' >
+                <div className='item-12 sgn_log bottom_line' >
                     <span className='sgnup_log'>
-                        <button>Sign up</button>
+                        <button className='sgn_log_btn'>Sign up</button>
                         <p>or</p>
-                        <button>Login</button>
+                        <button className='sgn_log_btn'>Login</button>
                         {" "}for a search results tailor for you
                     </span>
 
-                    <select>
-                        <option>Name</option>
+                    <select className='search_filter_video'>
+                        <option>Most Recent Upload</option>
+                        <option>View Count</option>
+                        <option>Ratings</option>
                     </select>
                 </div>
                 <SearchItem results={this.state.results} />

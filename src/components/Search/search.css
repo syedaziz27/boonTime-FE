@@ -4,8 +4,6 @@
     margin-left: 5%;
     margin-right: auto;
     grid-row-gap: 1rem;
-
-
 }
 
 .used-products {
@@ -60,11 +58,10 @@
 }
 
 .sgn_log {
-    border: 1px solid black;
     width: 90%;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
 }
 
 .sgnup_log {
@@ -72,15 +69,33 @@
 }
 
 .bottom_line {
-    /* display: flex; */
-    border-bottom: 1px solid black;
-    align-content: stretch;
+    border-bottom: 0.5px solid #000000;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
-.border {
-    border: 1px solid orchid;
+.sgn_log_btn {
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    width: 77px;
+    height: 33px;
 }
 
 .pointer {
     cursor: pointer;
+}
+
+.back {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.search_filter_video {
+    border: 1px solid #888686;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 310px;
+    height: 37px;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    line-height: 21px;
 }

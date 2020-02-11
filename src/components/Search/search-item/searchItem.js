@@ -29,9 +29,17 @@ export default (props) => {
                         <img className="item-1" src={cream} width="100%" alt='#' />
                         <img className="item-1" src={cream} width="100%" alt='#' />
                         <p className="more-items item-2 pointer">More...</p>
-                        <div className="row-search item-2">
-                            <span className="user-metadata-name item-6">Kylie</span>
-                            <span className=" user-metadata-sub-count item-6">Subscriber count</span>
+                        <div className='profile_picture'>
+                            <img
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+                                key="user_picture"
+                                alt="avatar"
+
+                            />
+                        </div>
+                        <div className="row-search item-6 used-products back">
+                            <span className="user-metadata-name item-6 user_name ">Greenskin001</span>
+                            <span className=" user-metadata-sub-count item-5">Subscriber count</span>
                         </div>
                     </div>
                 </div>

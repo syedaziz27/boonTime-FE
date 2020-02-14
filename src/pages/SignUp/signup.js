@@ -3,6 +3,7 @@ import "./signup.css";
 import firebase from "firebase";
 import AuthContext from "../../contexts/auth";
 import { Redirect } from "react-router-dom";
+import Axios from "axios";
 
 export default class SignUp extends React.Component {
   constructor(props) {
@@ -15,7 +16,10 @@ export default class SignUp extends React.Component {
       firstName: "",
       lastName: "",
       username: "",
-      displayName: "",
+      city: "",
+      state: "",
+      zip: "",
+      birthday: "",
       skinColor: "",
       skinType: "",
       hairType: "",
@@ -27,9 +31,12 @@ export default class SignUp extends React.Component {
   }
 
   handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
+    this.setState(
+      {
+        [e.target.name]: e.target.value
+      },
+      console.log(this.state[e.target.name])
+    );
   }
 
   setAttribute(name, value) {
@@ -37,6 +44,23 @@ export default class SignUp extends React.Component {
   }
 
   submit(e) {
+    e.preventDefault();
+
+    const {
+      email,
+      password,
+      firstName,
+      lastName,
+      username,
+      city,
+      state,
+      zip,
+      skinColor,
+      skinType,
+      hairType,
+      website
+    } = this.state;
+
     for (let key in this.state) {
       if (this.state[key] === "") {
         console.log(key);
@@ -50,90 +74,139 @@ export default class SignUp extends React.Component {
       return;
     }
 
-    e.preventDefault();
-    const { email, password } = this.state;
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        alert(err.message);
-      });
+    Axios.post(
+      "https://localhost:3004/user/newuser",
+      firstName,
+      lastName,
+      username,
+      email,
+      city,
+      state,
+      zip,
+      website,
+      skinColor,
+      skinType,
+      hairType
+    ).then(res => console.log(res));
+
+    // firebase
+    //   .auth()
+    //   .createUserWithEmailAndPassword(email, password)
+    //   .then(res => {
+    //     console.log(res);
+    //   })
+    //   .catch(err => {
+    //     alert(err.message);
+    //   });
   }
 
   render() {
     const displayForm = (
       <div className="signup-container">
         <div className="signup-banner">
-          <h2> JOIN NOW </h2> <h3> FOR A BEAUTY EXPERIENCE TAILORED TO YOU </h3>{" "}
-        </div>{" "}
+          <h2> JOIN NOW </h2> <h3> FOR A BEAUTY EXPERIENCE TAILORED TO YOU </h3>
+        </div>
         <div className="signup-form-container">
-          <div className="upload-img-container"> </div>{" "}
+          <div className="upload-img-container"> </div>
           <div className="signup-form">
-            <h4> For The Best Results, Answer as Many as Possible </h4>{" "}
+            <h4> For The Best Results, Answer as Many as Possible </h4>
             <div className="input-cont">
-              <span className="input-desc"> Email Address </span>{" "}
+              <span className="input-desc"> Email Address </span>
               <input
                 name="email"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-            </div>{" "}
+              ></input>
+            </div>
             <div className="input-cont">
-              <span className="input-desc"> Password </span>{" "}
+              <span className="input-desc"> Password </span>
               <input
                 name="password"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-              <span className="input-desc"> Confirm Password </span>{" "}
+              ></input>
+              <span className="input-desc"> Confirm Password </span>
               <input
                 name="confirmPw"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
+              ></input>
             </div>
             <div className="input-cont">
-              <span className="input-desc"> First Name </span>{" "}
+              <span className="input-desc"> First Name </span>
               <input
                 name="firstName"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-              <span className="input-desc"> Last Name </span>{" "}
+              ></input>
+              <span className="input-desc"> Last Name </span>
               <input
                 name="lastName"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
+              ></input>
             </div>
             <div className="input-cont">
-              <span className="input-desc"> Username </span>{" "}
+              <span className="input-desc"> Username </span>
               <input
                 name="username"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-            </div>{" "}
-            <div className="input-cont">
-              <span className="input-desc"> Display Name </span>{" "}
+              ></input>
+            </div>
+            {/* <div className="input-cont">
+              <span className="input-desc"> Display Name </span>
               <input
                 name="displayName"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
+            </div> */}
+            <div className="input-cont">
+              <span className="input-desc"> City </span>
+              <input
+                name="city"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
+            </div>
+            <div className="input-cont">
+              <span className="input-desc"> State </span>
+              <input
+                name="state"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
+            </div>
+            <div className="input-cont">
+              <span className="input-desc">Zip</span>
+              <input
+                name="zip"
+                placeholder="required"
+                className="input-field"
+                onChange={e => this.handleChange(e)}
+              ></input>
+            </div>
+            <div className="input-cont">
+              <span className="input-desc"> Birthday </span>{" "}
+              <input
+                name="birthday"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
               ></input>{" "}
             </div>
             <div className="input-cont">
-              <span className="input-desc"> Select Skin Color </span>{" "}
+              <span className="input-desc"> Select Skin Color </span>
               <div className="attribute-container">
                 <div className="attribute">
                   <div
@@ -141,14 +214,14 @@ export default class SignUp extends React.Component {
                     className="att-left white"
                     name="skinColor"
                     value="1"
-                  ></div>{" "}
+                  ></div>
                   <div
                     onClick={() => this.setAttribute("skinColor", "2")}
                     className="att-right yellow"
                     name="skinColor"
                     value="2"
-                  ></div>{" "}
-                </div>{" "}
+                  ></div>
+                </div>
                 <div className="attribute">
                   <div
                     onClick={() => this.setAttribute("skinColor", "3")}
@@ -161,8 +234,8 @@ export default class SignUp extends React.Component {
                     className="att-right purple"
                     name="skinColor"
                     value="4"
-                  ></div>{" "}
-                </div>{" "}
+                  ></div>
+                </div>
                 <div className="attribute">
                   <div
                     onClick={() => this.setAttribute("skinColor", "5")}
@@ -175,8 +248,8 @@ export default class SignUp extends React.Component {
                     className="att-right medbrown"
                     name="skinColor"
                     value="6"
-                  ></div>{" "}
-                </div>{" "}
+                  ></div>
+                </div>
                 <div className="attribute">
                   <div
                     onClick={() => this.setAttribute("skinColor", "7")}
@@ -189,8 +262,8 @@ export default class SignUp extends React.Component {
                     className="att-right darkbrown"
                     name="skinColor"
                     value="8"
-                  ></div>{" "}
-                </div>{" "}
+                  ></div>
+                </div>
                 <div className="attribute">
                   <div
                     onClick={() => this.setAttribute("skinColor", "9")}
@@ -203,52 +276,52 @@ export default class SignUp extends React.Component {
                     className="att-right black"
                     name="skinColor"
                     value="10"
-                  ></div>{" "}
-                </div>{" "}
-              </div>{" "}
+                  ></div>
+                </div>
+              </div>
             </div>
             <div className="input-cont">
-              <span className="input-desc"> Select Your Skin Type </span>{" "}
+              <span className="input-desc"> Select Your Skin Type </span>
               <div className="attribute-container">
                 <div
                   className="skin-type-cont"
                   name="skinType"
                   onClick={() => this.setAttribute("skinType", "Oily")}
                 >
-                  Oily{" "}
-                </div>{" "}
+                  Oily
+                </div>
                 <div
                   className="skin-type-cont"
                   name="skinType"
                   onClick={() => this.setAttribute("skinType", "Combo")}
                 >
-                  Combo{" "}
-                </div>{" "}
+                  Combo
+                </div>
                 <div
                   className="skin-type-cont"
                   name="skinType"
                   onClick={() => this.setAttribute("skinType", "Dry")}
                 >
-                  Dry{" "}
-                </div>{" "}
+                  Dry
+                </div>
                 <div
                   className="skin-type-cont"
                   name="skinType"
                   onClick={() => this.setAttribute("skinType", "Sensitive")}
                 >
-                  Sensitive{" "}
-                </div>{" "}
+                  Sensitive
+                </div>
                 <div
                   className="skin-type-cont"
                   name="skinType"
                   onClick={() => this.setAttribute("skinType", "Acne Prone")}
                 >
-                  Acne Prone{" "}
-                </div>{" "}
-              </div>{" "}
+                  Acne Prone
+                </div>
+              </div>
             </div>
             <div className="input-cont">
-              <span className="input-desc"> Select Your Hair Type </span>{" "}
+              <span className="input-desc"> Select Your Hair Type </span>
               <div className="attribute-container">
                 <div
                   className="skin-type-cont"
@@ -256,81 +329,81 @@ export default class SignUp extends React.Component {
                   onClick={() => this.setAttribute("hairType", "Straight")}
                   value="Straight"
                 >
-                  Straight{" "}
-                </div>{" "}
+                  Straight
+                </div>
                 <div
                   className="skin-type-cont"
                   name="hairType"
                   onClick={() => this.setAttribute("hairType", "Curly")}
                   value="Curly"
                 >
-                  Curly{" "}
-                </div>{" "}
+                  Curly
+                </div>
                 <div
                   className="skin-type-cont"
                   name="hairType"
                   onClick={() => this.setAttribute("hairType", "Kinky")}
                   value="Kinky"
                 >
-                  Kinky{" "}
-                </div>{" "}
+                  Kinky
+                </div>
                 <div
                   className="skin-type-cont"
                   name="hairType"
                   onClick={() => this.setAttribute("hairType", "Wavy")}
                   val="Wavy"
                 >
-                  Wavy{" "}
-                </div>{" "}
+                  Wavy
+                </div>
                 <div
                   className="skin-type-cont"
                   name="hairType"
                   onClick={() => this.setAttribute("hairType", "Baldy")}
                   value="Baldy"
                 >
-                  Baldy{" "}
-                </div>{" "}
-              </div>{" "}
+                  Baldy
+                </div>
+              </div>
             </div>
             <div className="input-cont">
-              <span className="input-desc"> Website </span>{" "}
+              <span className="input-desc"> Website </span>
               <input
                 name="website"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-            </div>{" "}
+              ></input>
+            </div>
             <div className="input-cont">
-              <span className="input-desc"> Facebook </span>{" "}
+              <span className="input-desc"> Facebook </span>
               <input
                 name="facebook"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-            </div>{" "}
+              ></input>
+            </div>
             <div className="input-cont">
-              <span className="input-desc"> Twitter </span>{" "}
+              <span className="input-desc"> Twitter </span>
               <input
                 name="twitter"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-            </div>{" "}
+              ></input>
+            </div>
             <div className="input-cont">
-              <span className="input-desc"> Instagram </span>{" "}
+              <span className="input-desc"> Instagram </span>
               <input
                 name="instagram"
                 placeholder="required"
                 className="input-field"
                 onChange={e => this.handleChange(e)}
-              ></input>{" "}
-            </div>{" "}
-          </div>{" "}
-        </div>{" "}
-        <button onClick={e => this.submit(e)}> submit </button>{" "}
+              ></input>
+            </div>
+          </div>
+        </div>
+        <button onClick={e => this.submit(e)}> submit </button>
       </div>
     );
     return (

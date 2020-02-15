@@ -14,7 +14,10 @@ const ToggleProductVideo = ({
               ? `addColor video_container`
               : `video_container`
           }`}
-          onClick={() => setToggleVideoAndProducts(false)}
+          onClick={() => {
+            localStorage.setItem("toggle", false);
+            return setToggleVideoAndProducts(false);
+          }}
         >
           <p className="video_btn">Videos</p>
         </div>
@@ -24,7 +27,10 @@ const ToggleProductVideo = ({
               ? `addColor product_container`
               : `product_container`
           }`}
-          onClick={() => setToggleVideoAndProducts(true)}
+          onClick={() => {
+            localStorage.setItem("toggle", true);
+            return setToggleVideoAndProducts(true);
+          }}
         >
           <p className="product_btn">
             Product <br /> Recommendations

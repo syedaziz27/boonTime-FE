@@ -12,3 +12,7 @@
 .videoContent {
     grid-area: videoContent;
 }
+
+.posts {
+    grid-area: posts;
+}

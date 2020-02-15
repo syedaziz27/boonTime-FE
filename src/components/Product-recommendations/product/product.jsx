@@ -1,7 +1,7 @@
 import React from "react";
 import "./product.css";
 
-const product = () => {
+const product = ({ product }) => {
   return (
     <>
       <div className="product-container">

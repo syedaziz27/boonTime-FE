@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+// import axios from "axios";
 import "./ViewVideoPage.css";
 import TitleVideo from "../../components/Title&Video/titleVideo";
 import SubscribeUserButton from "../../components/subscribeUserButton/subscribeUserButton";
@@ -19,6 +19,7 @@ const ViewVideoPage = () => {
     <>
       <div className="videoViewPage_container">
         <TitleVideo />
+
         <div className="videoContent">
           <SubscribeUserButton />
           <p>Category: Makeup</p>
@@ -44,6 +45,10 @@ const ViewVideoPage = () => {
           <button className="btn showMore" onClick={handleCLick}>
             Show More
           </button>
+
+          <div>
+            <p>Related Videos</p>
+          </div>
         </div>
       </div>
     </>

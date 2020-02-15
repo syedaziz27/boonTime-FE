@@ -20,6 +20,14 @@ const titleVideo = () => {
 
           <span>Updated: 4 Months ago</span>
         </div>
+        <div className="video_comments">
+          <h3>3,023 COMMENTS</h3>
+          <div>
+            <textarea rows="6" cols="100" name="comment" form="usrform">
+              Enter text here...
+            </textarea>
+          </div>
+        </div>
       </div>
     </>
   );

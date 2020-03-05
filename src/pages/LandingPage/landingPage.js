@@ -19,7 +19,7 @@ export default class LandingPage extends React.Component {
             <div> </div> <VideoCard />
             <div> </div> <VideoCard />
             <div> </div> <VideoCard />
-            <div> </div> <VideoCard />
+            {/* <div> </div> <VideoCard /> */}
             <div> </div>{" "}
           </div>{" "}
         </div>{" "}

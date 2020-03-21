@@ -1,0 +1,28 @@
+.pointer {
+    cursor: pointer;
+}
+
+/* .item-holder {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+} */
+
+.more-items {
+    display: flex;
+    align-items: flex-end;
+}
+
+.space {
+    padding-left: 35px;
+    /* padding-right: 100px; */
+    /* border: 1px solid red; */
+}
+
+.rm-space {
+    margin-left: 33px;
+}
+
+.shrink {
+    font-size: 25px;
+}

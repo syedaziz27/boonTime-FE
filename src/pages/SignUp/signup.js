@@ -75,7 +75,7 @@ export default class SignUp extends React.Component {
     }
 
     Axios.post(
-      "https://localhost:3004/user/newuser",
+      "http://localhost:3004/user/newuser", {
       firstName,
       lastName,
       username,
@@ -87,7 +87,11 @@ export default class SignUp extends React.Component {
       skinColor,
       skinType,
       hairType
-    ).then(res => console.log(res));
+    }
+    ).then(res => console.log(res)).catch(err => {
+      console.log(err)
+
+    });
 
     // firebase
     //   .auth()

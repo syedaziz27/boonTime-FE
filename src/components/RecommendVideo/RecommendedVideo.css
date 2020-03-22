@@ -10,6 +10,7 @@
 .videoRec {
     grid-area: videoRec;
     display: flex;
+    justify-content: space-around;
 }
 
 .vidInfo {

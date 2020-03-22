@@ -7,19 +7,24 @@ import arrow from "../../images/arrow.png";
 import AuthContext from "../../contexts/auth";
 
 function Navbar() {
+
+  const handleClick = (e) => {
+    console.log(e.target.name)
+  }
+
   return (
     <div className="navbar-container">
-      <img src={star}></img>
+      <img src={star} alt='img' />
       <div className="search-container">
         <div className="search-top-row">
           <div className="searchbar">
-            <img src={mg} className="mag-glass"></img>
+            <img src={mg} className="mag-glass" alt='mag-glass' />
 
             <input
               placeholder="Search or Filter"
               className="search-input"
-            ></input>
-            <img className="dropdown-arrow" src={arrow}></img>
+            />
+            <img className="dropdown-arrow" src={arrow} alt='arrow' />
           </div>
 
           <AuthContext.Consumer>
@@ -44,10 +49,10 @@ function Navbar() {
           <div></div>
 
           <div>Browse Categories:</div>
-          <div className="category">Make-up</div>
-          <div className="category">Hair</div>
-          <div className="category">Skin</div>
-          <div className="category">Nails</div>
+          <Link to='/search/1' onClick={handleClick} className="category" name='Make-up'>Make-up</Link>
+          <Link to='/search/1' onClick={handleClick} className="category" name='Hair'>Hair</Link>
+          <Link to='/search/1' onClick={handleClick} className="category" name='Skin'>Skin</Link>
+          <Link to='/search/1' onClick={handleClick} className="category" name='Nails'>Nails</Link>
           <div></div>
           <div></div>
           <div></div>

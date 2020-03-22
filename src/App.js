@@ -14,7 +14,7 @@ import firebase from "./firebase/firebase";
 import AuthContext from "./contexts/auth";
 
 class App extends React.Component {
-  state = { user: null };
+  state = { user: null, videoId: null };
 
   componentDidMount() {
     this.unsubscribe = firebase.auth().onAuthStateChanged(user => {
@@ -27,7 +27,13 @@ class App extends React.Component {
     });
   }
 
+  VideoId = (id) => {
+    this.setState({ videoId: id })
+    return this.state.videoId
+  }
+
   render() {
+
     return (
       <BrowserRouter>
         <AuthContext.Provider value={this.state.user}>
@@ -40,8 +46,9 @@ class App extends React.Component {
           <Route path="/vlogger" exact component={VideoCard} />
           <Route path="/signup" exact component={SignUp} />
           <Route path="/login" exact component={Login} />
-          <Route path="/logout" exact component={Logout}></Route>
-          <Route path="/search/:query" component={Search} />
+          <Route path="/logout" exact component={Logout} />
+          <Route path="/search/:query" render={() => <Search VideoId={this.VideoId} />} />
+
         </AuthContext.Provider>
       </BrowserRouter>
     );

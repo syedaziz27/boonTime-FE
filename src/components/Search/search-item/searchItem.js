@@ -4,33 +4,37 @@ import cream from '../../../images/cream.jpeg';
 import './searchItem.css';
 
 export default (props) => {
+
+    async function handleClick(event, title) {
+        await props.VideoId(title)
+        return;
+    }
+
     return (<>
         {props.results.map((e, i) => {
-            function handleClick() {
-                console.log('here')
-            }
+
             let title = e.title
             return (<React.Fragment key={i}>
 
                 <div className="item-3 bottom_line pointer">
-                    <Link to='/videopage' onClick={handleClick}> <video width="400" height='250' controls>
+                    <Link to='/videopage' onClick={(event) => handleClick(event, e.title)}> <video width="400" height='250' controls>
                         Your browser does not support HTML5 video.
                     </video></Link>
                 </div>
 
 
-                <div className="item-7 bottom_line">
-                    <h1 className={`item-12 space pointer ${title.length > 40 ? `shrink` : ``}`} >{title}</h1>
+                <div className="item-7 bottom_line space">
+                    <h1 className={`item-12 pointer space ${title.length > 40 ? `shrink` : ``}`} >{title}</h1>
                     <div className="row-search">
                         <span className='item-3'>1k Views * 3 hours ago</span>
 
                     </div>
-                    <div className="row-search used-products">
+                    <div className="row-search used-products ">
                         <span className='item-3 '>Skin Type: Sensitive</span>
                         <span className='item-3 used-products'>Products used:</span>
                     </div>
 
-                    <div className="row-search item-holder rm-space">
+                    <div className="row-search item-holder ">
                         <img className="item-1" src={cream} width="100%" alt='#' />
                         <img className="item-1" src={cream} width="100%" alt='#' />
                         <img className="item-1" src={cream} width="100%" alt='#' />

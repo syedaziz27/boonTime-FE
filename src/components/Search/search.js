@@ -2,9 +2,10 @@ import React from 'react';
 import './search.css';
 import axios from 'axios';
 import SearchItem from './search-item/searchItem';
+import { withRouter } from 'react-router-dom';
 
 
-export default class Search extends React.Component {
+class Search extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -29,11 +30,16 @@ export default class Search extends React.Component {
         const data = await this.FetchData();
         let text = this.props.match.params;
         const queryObj = { text: text, filters: null, };
-        this.setState({ results: data, query: queryObj }, () => console.log(this.state));
+        this.setState({ results: data, query: queryObj });
     }
     componentDidUpdate() {
 
     }
+
+    // grabId = (id) => {
+    //     return this.props.VideoId(id)
+    // }
+
     render() {
         return (<>
             <div className="row-search">
@@ -51,9 +57,12 @@ export default class Search extends React.Component {
                         <option>Ratings</option>
                     </select>
                 </div>
-                <SearchItem results={this.state.results} />
+                <SearchItem results={this.state.results} VideoId={this.props.VideoId} />
             </div>
 
         </>)
     }
 }
+
+
+export default withRouter(Search)

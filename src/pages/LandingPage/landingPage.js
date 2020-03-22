@@ -9,9 +9,9 @@ export default class LandingPage extends React.Component {
     return (
       <div>
         <div className="landing-container">
-          <div> </div> <TrendingChannels />
+
           <div> </div> <WelcomeVideos />
-          <div> </div>{" "}
+
         </div>
         <div className="trending-containers">
           <h3> Trending Videos </h3>{" "}
@@ -22,7 +22,9 @@ export default class LandingPage extends React.Component {
             <div> </div> <VideoCard />
             <div> </div>{" "}
           </div>{" "}
+          <button>Show More</button>
         </div>{" "}
+
       </div>
     );
   }
